@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header id="to-top">
+        <i class="fab fa-cuttlefish"></i>
+        <i class="far fa-registered"></i>
+        <i class="fab fa-uniregistry"></i>
+        <i class="fab fa-dyalog"></i>
+    </header>
+
+    <div class="header-2">
+        <p class="m-0">Products Store</p>
+    </div>
+
+    <section class=" curd-system p-5">
+        <div class=" container">
+            <div class=" row shadow-lg p-5">
+                <div class=" form-group">
+                    <label for="productName">Product Name</label> <span> * </span>
+                    <input type="text" id="productName" class=" form-control mb-3">
+                    <div id="nameAlert" class=" alert  alert-danger d-none">
+                        Product Name must start with capital letter and contains minimum 3 letters, Can't contain
+                        special characters
+                    </div>
+                </div>
+                <div class=" form-group">
+                    <label for="productCategory">Product Category</label> <span> * </span>
+                    <input type="text" id="productCategory" class=" form-control mb-3">
+                    <div id="categoerAlert" class=" alert  alert-danger d-none ">
+                        Product Category must contain minimum 5 letters, Can't contain special characters
+                    </div>
+                </div>
+                <div class=" form-group">
+                    <label for="productPrice">Product Price</label> <span> * </span>
+                    <input type="number" id="productPrice" class=" form-control mb-3">
+                    <div id="numberAlert" class="alert  alert-danger d-none">
+                        Product Price must be in range 100 : 10,000 (Numbers Only)
+                    </div>
+                </div>
+                <div class=" form-group">
+                    <label for="productDescription">Product Description</label> <span> * </span>
+                    <textarea type="text" id="productDescription" class=" form-control mb-3" row="2"></textarea>
+                    <div id="descriptionAlert" class=" alert  alert-danger d-none">
+                        Product Description must contain minimum 3 letters, Can't contain special characters
+                    </div>
+                </div>
+                <div class=" text-center">
+                    <button id="addClick" class="btn my-btn mt-3">Add product</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="crud-table p-5">
+        <div class="container">
+            <div class="row shadow-lg p-5">
+                <div class=" form-group1">
+                    <input type="text" id="searchTextName" onkeyup="search()" placeholder="Search Product By Name..."
+                        class=" form-control mb-3 w-25">
+                    <input type="text" id="searchTextCategory" onkeyup="search()"
+                        placeholder="Search Product By Category..." class=" form-control mb-3 w-25">
+                    <input type="number" id="searchTextPrice" onkeyup="search()"
+                        placeholder="Search Product By Price..." class=" form-control mb-3 w-25">
+                    <input type="text" id="searchTextDescription" onkeyup="search()"
+                        placeholder="Search Product By Description..." class=" form-control mb-3 w-25">
+                </div>
+                <div class="table-responsive">
+                    <table class=" table table-hover w-100">
+                        <thead class="table-head">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            <th></th>
+                            <th></th>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

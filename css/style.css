@@ -1,0 +1,62 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+header,
+.header-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    height: 130px;
+    background-color: teal;
+    color: #fff;
+    font-size: 70px;
+}
+
+header i {
+    margin-right: 10px;
+}
+
+.header-2 {
+    height: 30px;
+    background-color: #e2dfdf;
+    color: teal;
+}
+
+
+i {
+    cursor: pointer;
+}
+
+.form-group1 {
+    display: flex;
+}
+
+.route {
+    width: 200px;
+    height: 200px;
+    background-color: teal;
+    margin: 5px;
+}
+
+.table-head{
+    background-color: teal;
+}
+
+.my-btn {
+    background-color: teal;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.my-btn:hover {
+    background-color: #fff;
+    color: teal;
+    border: 1px solid teal;
+}
